@@ -7,6 +7,8 @@ def main():
         df['clean_name'] = df['clean_name'].astype(str).str.lower()
         pattern = r"[.]"
         df['clean_name'] = df['clean_name'].str.replace(pattern, '', regex=True)
+        df_replaced = df.fillna(value=None)
         print("clean names standardized")
     except:
         print("something went wrong")
+    
